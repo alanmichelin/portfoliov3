@@ -39,7 +39,7 @@ const Projects = (props) =>{
 
 
 const card = (
-  <React.Fragment>
+  <div>
     <div style={divStyle}></div>
     <CardContent style={{textAlign:'center'}}>
       <Typography variant="h5" component="div">
@@ -48,13 +48,12 @@ const card = (
       <Typography sx={{ mb: 1.5 }} color="text.secondary">
         {props.languages}
       </Typography>
-      <Typography variant="body2" style={{height:'10vh',paddingBottom:'10px'}} >
+      <Typography variant="body2" style={{height:'10vh',paddingBottom:'3vh'}} >
         {props.description}  
       </Typography>
-      <div style={{height:'300px'}}>
+      <div style={{height:'250px'}}>
 
-      
-      <img src={require('.' + props.img).default} alt="img" heigth='auto' width='100%'/>
+      <img src={require('.' + props.img).default} alt="img" height='auto' width='80%' style={{display:'block',margin:'0 auto'}} />
       </div>
     </CardContent>
     <CardActions style={{justifyContent: 'space-evenly'}}>
@@ -68,17 +67,17 @@ const card = (
       </div>
       
     </CardActions>
-  </React.Fragment>
+  </div>
 );
 
 
   return (
-    <Grid item xs={12} sm={4} lg={4} display='inline-block' paddingX="1vw" paddingY='3vh'>
+    // <Grid item xs={12} sm={12} lg={12} display='inline-block' paddingX="1vw" paddingY='3vh'>
       
-      {/* <Card variant="outlined" onMouseEnter={()=>{setIsActive(true)}} onMouseLeave={()=>{setIsActive(false)}}>{card}</Card> */}
+      // {/* <Card variant="outlined" onMouseEnter={()=>{setIsActive(true)}} onMouseLeave={()=>{setIsActive(false)}}>{card}</Card> */}
       <Card variant="outlined">{card}</Card>
-    </Grid>
-  );
+    // </Grid>
+  )
   }
 
   export default Projects

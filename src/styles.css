@@ -8,6 +8,8 @@ html{
     padding: 8px;
     /* color:rgb(46, 46, 46); */
     background: radial-gradient(rgb(0, 29, 90),#101d1f);
+    background-size: 110%;
+    overflow-y: hidden;
     /* background: radial-gradient(rgb(0, 0, 0),#101d1f); */
 
 }
