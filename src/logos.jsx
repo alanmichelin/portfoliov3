@@ -19,21 +19,19 @@ const Item = {
 export default function Logos() {
     const logos = Logo.logos
     return (
-      <Grid container > 
-      <Grid sm={2}></Grid>
-      <Grid xs={12} sm={8} style={{display:'flex',justifyContent: 'space-evenly',flexWrap:'wrap'}}>
+
+      // {/* <Grid xs={12} sm={8} style={{display:'flex',justifyContent: 'space-evenly',flexWrap:'wrap'}}> */}
         
-            {logos.map(e=>
+            logos.map(e=>
                 
                 <div style={Item}>
                 <p><b>{Object.keys(e)}</b></p>
                 <img src={Object.values(e)} alt={Object.keys(e)} srcset="" style={{maxWidth:'4rem',  maxHeight:'4rem'}}  />
                 </div>
                 
-            )}
+            )
             
-      </Grid>
-    </Grid>)
+   )
 }
 
 

@@ -108,7 +108,7 @@ function App() {
       
       <Presentation handleClick={executeScroll} handleClick2={executeScroll2} text={data.general.Buttons} changeLanguage={handleChange} />
 
-      <Grid ref={myRef2} item xs={12} sm={12} lg={12} style={{marginTop:'25vh', marginBottom:'30vh'}}   >
+      <Grid ref={myRef2} item xs={12} sm={12} lg={12} style={{marginTop:'50vh', marginBottom:'30vh'}}   >
         <Profile data={data.profile}/>
       </Grid>
  
