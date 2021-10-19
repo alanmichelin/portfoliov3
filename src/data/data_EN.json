@@ -19,7 +19,7 @@
        "Description": "The idea of ​​this project was to create a web application to manage expenses, being able to add, modify and delete data, showing the flow of data",
        "Code": "https://github.com/alanmichelin/MERN-expense_manager",
        "LiveDemo": "",
-       "img":"/img/procyon.png"
+       "img":"/img/expensemanager.png"
       },
 
       {"Project": "Token Tools",

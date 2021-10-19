@@ -19,7 +19,7 @@
        "Description":"La idea de este proyecto, fue crear una aplicacion web para administrar gastos, pudiendo agregar, modificar y eliminar datos, mostrando el flujo de entrada y salida de dinero",
        "Code":"https://github.com/alanmichelin/MERN-expense_manager",
        "LiveDemo":"",
-       "img":"/img/procyon.png"
+       "img":"/img/expensemanager.png"
       },
 
       {"Project":"Token Tools",

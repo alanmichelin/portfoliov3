@@ -65,7 +65,7 @@ export default function BasicModal({handleModal}) {
                     <img src={selected} alt="" style={{height:'50vh',width:'auto'}} /> 
                     
                 </div>
-                <button onClick={()=>{window.open(selected===cv_es ? cv_es : cv_en, '_blank')}}>Download PDF</button>   
+                <button onClick={()=>{window.open(selected===cv_es ? pdf_es : pdf_en, '_blank')}}>Download PDF</button>   
           {/* <Typography id="modal-modal-title" variant="h6" component="h2">
             Text in a modal
           </Typography> */}

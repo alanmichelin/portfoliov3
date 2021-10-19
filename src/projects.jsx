@@ -73,7 +73,7 @@ const card = (
 
 
   return (
-    <Grid item xs={12} sm={4} display='inline-block' paddingX="1vw" paddingY='3vh'>
+    <Grid item xs={12} sm={4} lg={4} display='inline-block' paddingX="1vw" paddingY='3vh'>
       
       {/* <Card variant="outlined" onMouseEnter={()=>{setIsActive(true)}} onMouseLeave={()=>{setIsActive(false)}}>{card}</Card> */}
       <Card variant="outlined">{card}</Card>
