@@ -1,0 +1,15 @@
+{
+    "logos":[
+        {"HTML":"https://cdn.worldvectorlogo.com/logos/html-1.svg"},
+        {"CSS":"http://www.priteshgupta.com/wp-content/uploads/2011/10/CSS3-Logo.png"},
+        {"JavaScript":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/245px-Unofficial_JavaScript_logo_2.svg.png"},
+        {"React":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/250px-React.svg.png"},
+        {"NodeJS":"https://victorroblesweb.es/wp-content/uploads/2018/01/nodejs-victorroblesweb-150x150.png"},
+        {"ExpressJS":"https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/359/full/expressjslogo.png"},
+        {"MaterialUI":"https://cdn.worldvectorlogo.com/logos/material-ui-1.svg"},
+        {"MySql":"https://blog.artegrafico.net/wp-content/uploads/2019/10/mysql-logo-300x300.png"},
+        {"Java":"https://i.blogs.es/8d2420/650_1000_java/1366_2000.png"},
+        {"Github":"https://cdn-icons-png.flaticon.com/512/25/25231.png"}
+        
+    ]
+}

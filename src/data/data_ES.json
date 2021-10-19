@@ -1,0 +1,62 @@
+{
+   "general":{
+      "Title":"Desarrollador Full-Stack",
+      "Buttons":["Perfil", "Curriculum", "Proyectos"],
+      "NavBar":["Inicio","Perfil", "Curriculum", "Proyectos"],
+      "TextAnim":"Bienvenido a mi portfolio"
+   },
+   "profile":{
+      "profile":"Perfil",
+      "about":"Sobre mi",
+      "age": "21 años",
+      "uni": "Estudio Analista en Sistemas en ORT",
+      "desc":"Desde hace mas de un año me meti en la programacion, realizando una variedad de proyectos segun lo que se me fue ocurriendo en el tiempo. Empecé con idea de meterme en el Front-end pero hace unos meses que ya estoy realizando aplicaciones de tanto Front-end como Back-End .",
+      "tech":"Habilidades tecnicas"
+   },
+   "projects":[
+      {"Project":"Expense Manager",
+       "Languages":"MySQL, Express, Material UI, NodeJS, React, JS",
+       "Description":"La idea de este proyecto, fue crear una aplicacion web para administrar gastos, pudiendo agregar, modificar y eliminar datos, mostrando el flujo de entrada y salida de dinero",
+       "Code":"https://github.com/alanmichelin/MERN-expense_manager",
+       "LiveDemo":"",
+       "img":"/img/procyon.png"
+      },
+
+      {"Project":"Token Tools",
+      "Languages":"JavaScript, NodeJS, Telegram API",
+      "Description":"Token tools es un bot de telegram que se utiliza como herramienta al momento de invertir en criptomonedas. Mi tarea en este proyecto fue arreglar errores relacionados a la experiencia del usuario.",
+       "Code":"",
+       "LiveDemo":"http://tokentools.finance",
+       "img":"/img/tokentools.jpg"
+      },
+      {"Project":"Procyon landing page",
+      "Languages":"React,JavaScript, Material UI, HTML, CSS",
+      "Description":"Procyon es un equipo de E-Sports. La pagina todavia esta en desarrollo.",
+      "Code":"https://github.com/alanmichelin/procyonpage",
+      "LiveDemo":"https://procyon-esports.netlify.app",
+      "img":"/img/procyon.png"
+      },
+      {"Project":"ORT Restaurante",
+      "Languages":"React,JavaScript, React-Bootstrap, HTML, CSS",
+      "Description":"Esta pagina, fue diseñada para presentar como trabajo en mi universidad, consiste en mostrar datos como respuesta a peticiones a una API publica de comidas aleatorias",
+      "Code":"https://github.com/alanmichelin/ort-restaurante",
+      "LiveDemo":"https://ort-restaurante.netlify.app/",
+      "img":"/img/restauranteort.png"
+      },
+      {"Project":"Video Downloader",
+      "Languages":"JavaScript, NodeJS, Puppeteer, Youtube API",
+      "Description":"Aplicacion de escritorio, utilizada para descargar videos de YouTube, Facebook e Instagram",
+      "Code":"https://github.com/alanmichelin/VideoDownloader",
+      "LiveDemo":"https://github.com/alanmichelin/VideoDownloader/releases/tag/1.0.1beta",
+      "img":"/img/videodownloader.png"
+      },
+      {"Project":"PongJS",
+      "Languages":"JavaScript, CSS, HTML",
+      "Description":"Version web del juego PONG utilizando CSS para dar estilos y JavaScript para la logica del juego",
+      "Code":"https://github.com/alanmichelin/pongjs",
+      "LiveDemo":"https://alanmichelin.github.io/pongjs/",
+      "img":"/img/PongJS.png"
+      }
+      
+   ]
+}

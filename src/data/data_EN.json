@@ -1,0 +1,62 @@
+{
+   "general":{
+      "Title":"Full-Stack Developer",
+      "Buttons":["Profile", "Resume", "Projects"],
+      "NavBar":["Home","Profile", "Resume", "Projects"],
+      "TextAnim":"Welcome to my portfolio"
+   },
+   "profile":{
+      "profile":"Profile",
+      "about":"About me",
+      "age": "21 years old",
+      "uni": "Studying System Analyst at ORT University",
+      "desc":"I have been in the programming for more than a year, creating projects according to what occurred to me over time. I started with the idea of ​​getting into the Front-end but for months I have been doing both Front-end and Back-End applications.",
+      "tech":"Technical skills"
+   },
+   "projects": [
+      {"Project": "Expense Manager",
+       "Languages": "MySQL, Express, Material UI, NodeJS, React, JS",
+       "Description": "The idea of ​​this project was to create a web application to manage expenses, being able to add, modify and delete data, showing the flow of data",
+       "Code": "https://github.com/alanmichelin/MERN-expense_manager",
+       "LiveDemo": "",
+       "img":"/img/procyon.png"
+      },
+
+      {"Project": "Token Tools",
+      "Languages": "JavaScript, NodeJS, Telegram API",
+      "Description": "Token tools is a telegram bot that is used as a tool when investing in cryptocurrencies. My task in this project was to fix issues related to user experience.",
+       "Code": "",
+       "LiveDemo": "http://tokentools.finance",
+       "img":"/img/procyon.png"
+      },
+      {"Project": "Procyon landing page",
+      "Languages": "React, JavaScript, Material UI, HTML, CSS",
+      "Description": "Procyon is an E-Sports team. The page is still under development.",
+      "Code": "https://github.com/alanmichelin/procyonpage",
+      "LiveDemo": "https://procyon-esports.netlify.app",
+      "img":"/img/procyon.png"
+      },
+      {"Project": "ORT Restaurant",
+      "Languages": "React, JavaScript, React-Bootstrap, HTML, CSS",
+      "Description": "This page, was designed to present as a project at my university, consists of showing data by making requests to a public API of random meals",
+      "Code": "https://github.com/alanmichelin/ort-restaurante",
+      "LiveDemo": "https://ort-restaurante.netlify.app/",
+      "img":"/img/restauranteort.png"
+      },
+      {"Project": "Video Downloader",
+      "Languages": "JavaScript, NodeJS, Puppeteer, Youtube API",
+      "Description": "Desktop application, used to download videos from YouTube, Facebook and Instagram",
+      "Code": "https://github.com/alanmichelin/VideoDownloader",
+      "LiveDemo": "https://github.com/alanmichelin/VideoDownloader/releases/tag/1.0.1beta",
+      "img":"/img/videodownloader.png"
+      },
+      {"Project": "PongJS",
+      "Languages": "JavaScript, CSS, HTML",
+      "Description": "Web version of the PONG game using CSS to give styles and JavaScript for the logic",
+      "Code": "https://github.com/alanmichelin/pongjs",
+      "LiveDemo": "https://alanmichelin.github.io/pongjs/",
+      "img":"/img/PongJS.png"
+      }
+      
+   ]
+}
