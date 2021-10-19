@@ -23,7 +23,7 @@ const Presentation = ({handleClick,handleClick2,text,changeLanguage}) =>{
       <div style={{ height:'100vh' , zIndex:-2,display:'block'}}>
       <div style={{textAlign:'center', paddingTop:'20vh', }}>
         <div style={{top:'15vh',right:'20vw',position:'absolute'}}>
-        <Lang selectLanguage={changeLanguage} />
+        <Lang selectLanguage={changeLanguage} content={text[3]}/>
         </div>
       <h1 style={{textAlign:'center', fontFamily:'Bebas Neue', fontSize:100 , color:'white',letterSpacing:'8px'}}>FULL-STACK DEVELOPER</h1> 
       

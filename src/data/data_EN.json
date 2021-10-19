@@ -1,7 +1,7 @@
 {
    "general":{
       "Title":"Full-Stack Developer",
-      "Buttons":["Profile", "Resume", "Projects"],
+      "Buttons":["Profile", "Resume", "Projects","Language"],
       "NavBar":["Home","Profile", "Resume", "Projects"],
       "TextAnim":"Welcome to my portfolio"
    },

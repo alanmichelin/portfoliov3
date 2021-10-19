@@ -2,7 +2,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { useState,useEffect } from 'react';
-const Lang =({selectLanguage}) =>{
+const Lang =({selectLanguage,content}) =>{
     const [lang, setLang] = useState('ES');
     const handleChange = (event) => {
         setLang(event.target.value);
@@ -13,7 +13,7 @@ const Lang =({selectLanguage}) =>{
     return(
     <div style={{marginRight:0,marginLeft:'auto',display:'flex',alignItems:'center', color:'white'}}>
        
-      <p style={{fontSize:'24px',fontFamily:['Noto Sans Mono', 'monospace'],paddingTop:'5px'}}>Idioma</p>
+      <p style={{fontSize:'24px',fontFamily:['Noto Sans Mono', 'monospace'],paddingTop:'5px'}}>{content}</p>
       <FormControl sx={{ m: 1, width: 70, maxHeight:40 }}>
         <Select
           value={lang}
