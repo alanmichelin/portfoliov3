@@ -3,7 +3,7 @@ html{
 }
 
 .background{
-    z-index: -10;
+    z-index: 5;
     position: relative;
     margin: -8px;
     padding: 8px;
