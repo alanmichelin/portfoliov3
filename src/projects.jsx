@@ -45,16 +45,20 @@ const card = (
       <Typography variant="h5" component="div">
         {props.title}
       </Typography>
+      
+
+      {/* <div style={{width:'100%',height:'220px',backgroundPosition:'center center', backgroundSize:'cover', backgroundRepeat:'no-repeat' ,backgroundImage:`url(${require('.' + props.img).default})`}}> */}
+      <div style={{display:'flex'}}>
+
+      {/* <img src={require('.' + props.img).default} alt="img" height='auto' width='80%' style={{display:'block',margin:'0 auto'}} /> */}
+      <img src={require('.' + props.img).default} alt="img" style={{float:'left',width:'100%',height:'300px',objectFit:'cover',  border:'2px solid black'}} />
+      </div>
       <Typography sx={{ mb: 1.5 }} color="text.secondary">
         {props.languages}
       </Typography>
-      <Typography variant="body2" style={{height:'10vh',paddingBottom:'3vh'}} >
+      <Typography variant="body2" style={{height:'85px'}} >
         {props.description}  
       </Typography>
-      <div style={{height:'250px'}}>
-
-      <img src={require('.' + props.img).default} alt="img" height='auto' width='80%' style={{display:'block',margin:'0 auto'}} />
-      </div>
     </CardContent>
     <CardActions style={{justifyContent: 'space-evenly'}}>
     <div>
