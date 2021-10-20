@@ -20,7 +20,7 @@ function App() {
   const [changeBackground,setChangeBackground] = useState({background:''})
   const myRef = useRef(null)
   const myRef2 = useRef(null)
-  const [bgColor,setBGColor] =useState({R:0,G:29,B:90})
+  const [bgColor,setBGColor] =useState({R:0,G:31,B:102})
 
 
 
@@ -55,11 +55,11 @@ function App() {
     var prevB = bgColor.B
 
     if(offset>prevOffset){
-    setBGColor({R:prevR+2,G:prevG+5,B:prevB+5})
+    setBGColor({R:prevR,G:prevG+1,B:prevB+2})
     handleBackground()
     }
     else if(prevOffset>offset){
-      setBGColor({R:prevR-2,G:prevG-5,B:prevB-5})
+      setBGColor({R:prevR,G:prevG-1,B:prevB-2})
     handleBackground()
     }
 
