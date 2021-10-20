@@ -34,28 +34,29 @@ const Presentation = ({handleClick,handleClick2,text,changeLanguage}) =>{
       <TextAnimated/>
       </Grid>
         <Grid lg={4}></Grid>
-        <Grid xs={12}  lg={4} style={{display:'flex',justifyContent: 'space-evenly', color:'white',fontFamily:['Noto Sans Mono', 'monospace']}}>
+        <Grid xs={12} md={12} lg={4} style={{display:'flex',justifyContent: 'space-evenly', color:'white',fontFamily:['Noto Sans Mono', 'monospace']}}>
 
-        <div style={{position:'sticky'}}>
+        <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
+        <h3>{text[0]}</h3>
         <Avatar sx={{ bgcolor: 'white', width: '10vh', height: '10vh', boxShadow:'0px 10px 15px 5px rgba(0, 0, 0, 1)', cursor:'pointer'}} onClick={handleClick2}>
           <PersonRoundedIcon sx={{ color: lightBlue[900], fontSize: '6vh' }} />
-          
         </Avatar>
-        <h3 style={{textAlign:'center'}}>{text[0]}</h3>
+        
         </div>
-        <div style={{position:'sticky'}}>
+        <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
+        <h3>{text[1]}</h3>
         <Avatar sx={{ bgcolor: 'white', width: '10vh', height: '10vh', boxShadow:'0px 10px 15px 5px rgba(0, 0, 0, 1)', cursor:'pointer' }} onClick={handleOpen}  >
           <SimCardDownloadIcon  sx={{ color: lightBlue[900], fontSize: '6vh'}}/>
         </Avatar>
-        <h3 style={{textAlign:'center'}}>{text[1]}</h3>
-        </div>
-        <div>
-
         
+        </div>
+        <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
+
+        <h3 >{text[2]}</h3>
         <Avatar sx={{ bgcolor: 'white', width: '10vh', height: '10vh', boxShadow:'0px 10px 15px 5px rgba(0, 0, 0, 1)', cursor:'pointer' }} onClick={handleClick}>
           <CodeRoundedIcon  sx={{ color: lightBlue[900], fontSize: '6vh' }}/>
         </Avatar>
-        <h3 style={{textAlign:'center'}}>{text[2]}</h3>
+        
         </div>
         </Grid>
     </Grid> 
