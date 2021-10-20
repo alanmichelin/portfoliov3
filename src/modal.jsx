@@ -4,10 +4,12 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import DownloadIcon from '@mui/icons-material/Download';
 import cv_es from './img/cv_es.png'
 import cv_en from './img/cv_en.png'
 import pdf_en from './img/cv_en.pdf'
 import pdf_es from './img/cv_es.pdf'
+import CloseIcon from '@mui/icons-material/Close';
 const style = {
   display:'flex',
   alignItems: 'center',
@@ -51,7 +53,9 @@ export default function BasicModal({handleModal}) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+        <Button style={{marginLeft:'auto',rigth:'0px'}}><CloseIcon/></Button>
             <div style={{display:'flex', flexDirection:'row', marginBottom:'25px'}} >
+              
                 <div style={{display:'flex', flexDirection:'column'}}>
                     <p>English</p>
                     <img src={cv_en} alt="" style={{height:'20vh', border: selected===cv_en ? '2px solid blue' : '' }} onClick={()=>{changeSelected(cv_en)}}/>
@@ -65,7 +69,7 @@ export default function BasicModal({handleModal}) {
                     <img src={selected} alt="" style={{height:'50vh',width:'auto'}} /> 
                     
                 </div>
-                <button onClick={()=>{window.open(selected===cv_es ? pdf_es : pdf_en, '_blank')}}>Download PDF</button>   
+                <Button variant='contained' startIcon={<DownloadIcon/>} onClick={()=>{window.open(selected===cv_es ? pdf_es : pdf_en, '_blank')}}>Download PDF</Button>   
           {/* <Typography id="modal-modal-title" variant="h6" component="h2">
             Text in a modal
           </Typography> */}
