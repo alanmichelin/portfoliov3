@@ -39,24 +39,21 @@ const Projects = (props) =>{
 
 
 const card = (
-  <div>
+  <div style={{overflow:'hidden'}}>
     <div style={divStyle}></div>
-    <CardContent style={{textAlign:'center'}}>
-      <Typography variant="h5" component="div">
+    <CardContent style={{textAlign:'center' }}>
+      <Typography variant="h5" component="div" style={{display:'inline-block',height:'60px'}}>
         {props.title}
       </Typography>
       
-
-      {/* <div style={{width:'100%',height:'220px',backgroundPosition:'center center', backgroundSize:'cover', backgroundRepeat:'no-repeat' ,backgroundImage:`url(${require('.' + props.img).default})`}}> */}
       <div style={{display:'flex'}}>
 
-      {/* <img src={require('.' + props.img).default} alt="img" height='auto' width='80%' style={{display:'block',margin:'0 auto'}} /> */}
       <img src={require('.' + props.img).default} alt="img" style={{float:'left',width:'100%',height:'300px',objectFit:'cover',  border:'2px solid black'}} />
       </div>
-      <Typography sx={{ mb: 1.5 }} color="text.secondary">
+      <Typography sx={{ mb: 1.5 }} color="text.secondary" style={{display:'inline-block',height:'40px'}}>
         {props.languages}
       </Typography>
-      <Typography variant="body2" style={{height:'85px'}} >
+      <Typography variant="body2" style={{display:'inline-block', height:'100px', overflow:'hidden'}} >
         {props.description}  
       </Typography>
     </CardContent>
@@ -76,11 +73,9 @@ const card = (
 
 
   return (
-    // <Grid item xs={12} sm={12} lg={12} display='inline-block' paddingX="1vw" paddingY='3vh'>
-      
-      // {/* <Card variant="outlined" onMouseEnter={()=>{setIsActive(true)}} onMouseLeave={()=>{setIsActive(false)}}>{card}</Card> */}
+
       <Card variant="outlined">{card}</Card>
-    // </Grid>
+
   )
   }
 
