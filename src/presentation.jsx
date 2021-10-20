@@ -18,8 +18,7 @@ const Presentation = ({handleClick,handleClick2,text,changeLanguage}) =>{
     }
     return (
 
-  
-  // {/* <BasicModal handleOpen={openModal} openModal ={openzd}/> */}
+
       <div style={{ height:'100vh' , zIndex:-2,display:'block'}}>
       <BasicModal handleModal={openModal} />
       <div style={{textAlign:'center', paddingTop:'20vh', }}>

@@ -114,16 +114,23 @@ function App() {
  
 
     <Grid container ref={myRef} spacing={2} style={{paddingBottom:'20vh'}}>
+    
     <Grid item xs={12} lg={12} style={{fontSize:'48px', color:'white'}}>
         <h3 style={{fontFamily:'Bebas Neue',letterSpacing:'3px',textAlign:'center'}}>Projects</h3>
         </Grid>
+
+        
+        
+        
+        
         {data.projects.map(e=>
-        <Grid item xs={12} md={6} lg={3}>
+        <Grid item xs={12} md={6} lg={3} style={{boxShadow: '0px 10px 20px 0px rgba(0,0,0,0.15)'}}> 
         <Projects title={e.Project} languages={e.Languages} description={e.Description} sourceCode={e.Code} livedemo={e.LiveDemo} img={e.img}/>
         </Grid>
         )
         }
         </Grid>
+        
     {/* </Container> */}
   </div>
 
