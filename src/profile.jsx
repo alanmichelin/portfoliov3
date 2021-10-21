@@ -15,17 +15,20 @@ return(
         </Grid>
         <Grid  item lg={2} md={12} ></Grid>
 
-        <Grid item lg={4} md={4} sm={12} style={{fontSize:'24px', color:'white'}}>
-        <h3 style={{fontFamily:'Bebas Neue',letterSpacing:'3px',textAlign:'center'}}>{data.about}</h3>
-        <p style={{fontFamily:['Open Sans Condensed', 'sans-serif']}}><PersonIcon style={{position:'relative',top:'4px'}}/> Alan Michelin </p>
-        <p style={{fontFamily:['Open Sans Condensed', 'sans-serif']}}><LocationOnIcon  style={{position:'relative',top:'4px'}}/> Argentina, Buenos Aires</p>
-        <p style={{fontFamily:['Open Sans Condensed', 'sans-serif']}}><TodayIcon  style={{position:'relative',top:'4px'}}/> {data.age} </p>
-        <p style={{fontFamily:['Open Sans Condensed', 'sans-serif']}}><SchoolIcon  style={{position:'relative',top:'4px'}}/> {data.uni}</p>
-        <p style={{fontFamily:['Open Sans Condensed', 'sans-serif']}}><InfoIcon  style={{position:'relative',top:'4px'}}/> {data.desc}</p>
-
+        <Grid item lg={4} md={4} sm={12} style={{color:'white'}}>
+        <div style={{ fontSize:'35px', textAlign:'center'}}>
+        <h3 style={{fontFamily:'Bebas Neue',letterSpacing:'3px'}}>{data.about}</h3>
+        </div>
+        <div style={{fontSize:'20px',  fontFamily:['Roboto', 'sans-serif']}}>
+        <p><PersonIcon style={{position:'relative',top:'4px'}}/> Alan Michelin </p>
+        <p><LocationOnIcon  style={{position:'relative',top:'4px'}}/> Argentina, Buenos Aires</p>
+        <p><TodayIcon  style={{position:'relative',top:'4px'}}/> {data.age} </p>
+        <p><SchoolIcon  style={{position:'relative',top:'4px'}}/> {data.uni}</p>
+        <p><InfoIcon  style={{position:'relative',top:'4px'}}/> {data.desc}</p>
+        </div>
     </Grid>
         <Grid item lg={1}></Grid>
-        <Grid item lg={3} md={6} sm={12} style={{ fontSize:'24px', color:'white',textAlign:'center'}}>
+        <Grid item lg={3} md={6} sm={12} style={{ fontSize:'35px', color:'white',textAlign:'center'}}>
         <h3 style={{fontFamily:'Bebas Neue',letterSpacing:'3px'}}>{data.tech}</h3>
         <Grid item style={{display:'flex',justifyContent: 'space-evenly',flexWrap:'wrap'}}>
         <Logos/>

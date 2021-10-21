@@ -4,11 +4,22 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+// import p from '@mui/material/p';
 import { Grid } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { createTheme } from '@mui/material';
+import { ThemeProvider } from '@mui/material';
 
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+
+const theme = createTheme({
+  palette: {
+    action: {
+      disabledBackground: '#BEBEBE',
+      disabled: '#919191'
+    }
+  }
+});
 const Projects = (props) =>{
 
   const [isActive, setIsActive] = useState(false)
@@ -41,33 +52,35 @@ const Projects = (props) =>{
 const card = (
   <div style={{overflow:'hidden'}}>
     <div style={divStyle}></div>
-    <CardContent style={{textAlign:'center' }}>
-      <Typography variant="h5" component="div" style={{display:'inline-block',height:'60px'}}>
+    <CardContent style={{textAlign:'center', backgroundColor:'#081A44', color:'#ADDEEB', fontFamily:['Roboto', 'sans-serif'],  fontStyle:''}}>
+      <p variant="h5" component="div" style={{display:'inline-block',height:'60px'}}>
         {props.title}
-      </Typography>
+      </p>
       
       <div style={{display:'flex'}}>
 
-      <img src={require('.' + props.img).default} alt="img" style={{float:'left',width:'100%',height:'300px',objectFit:'cover',  border:'2px solid black'}} />
+      <img src={require('.' + props.img).default} alt="img" style={{float:'left', width:'100%', height:'300px',objectFit:'cover'}} />
       </div>
-      <Typography sx={{ mb: 1.5 }} color="text.secondary" style={{display:'inline-block',height:'40px'}}>
+      <p sx={{ mb: 1.5 }} color="text.secondary" style={{display:'inline-block',height:'40px'}}>
         {props.languages}
-      </Typography>
-      <Typography variant="body2" style={{display:'inline-block', height:'100px', overflow:'hidden'}} >
+      </p>
+      <p variant="body2" style={{display:'inline-block', height:'100px', overflow:'hidden'}} >
         {props.description}  
-      </Typography>
-    </CardContent>
+      </p>
+    
     <CardActions style={{justifyContent: 'space-evenly'}}>
     <div>
+    <ThemeProvider theme={theme}>
     <Button variant="contained" disabled={codeDisabled}  href={sourceCode}>
       Source code <GitHubIcon/>
       </Button>
     <Button variant="contained" disabled={demoDisabled} href={liveDemo}>
       Live Demo <PlayCircleIcon/>
       </Button>
-      </div>
-      
-    </CardActions>
+      </ThemeProvider>
+      </div>  
+      </CardActions>
+    </CardContent>
   </div>
 );
 
