@@ -15,6 +15,9 @@ import BasicModal from './modal';
 import ButtonAppBar from './appbar';
 import Contact from './contact';
 import ModalProjects from './modalProjects';
+import { Switch } from '@mui/material';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
 function App() {
 
  
@@ -29,7 +32,7 @@ function App() {
 
   const [modal,setModal]= useState(false)
   const[openModal,setOpenModal] = useState(false)
-
+  const [darkMode,setDarkMode] = useState(false)
   const [projectsModalData,setProjectsModalData]= useState('')
 
   const executeScroll =(props) =>{
@@ -72,6 +75,12 @@ function App() {
     
     setProjectsModalData(data)
   }
+  const label = { inputProps: { 'aria-label': 'Switch demo' } };
+
+  const handleMode = () =>{
+    setDarkMode(!darkMode)
+  }
+
 
 return (   
   <div>
@@ -94,13 +103,21 @@ return (
       <Grid item xs={12} lg={9}>
         <h3 style={{fontFamily:'Montserrat',fontSize:'7vh'}}>{data.general.Buttons[2]}</h3>
         <p style={{marginTop:'-5vh'}}>{data.general.instructions}</p>
+        <div style={{display:'flex'}}>
+        <DarkModeIcon style={{fontSize:'4vh'}}/>
+        <Switch {...label} defaultChecked onClick={handleMode} />
+        <LightModeIcon style={{fontSize:'4vh'}}/>
+
+        </div>
+
       </Grid>
 
  
 
       <Grid xl={3}></Grid>
+
           <Grid container item xl={6} spacing={3}>
-           
+
           {data.projects.map((e,idx)=>
             <Grid data-aos={idx%2===0? "fade-up" : "fade-down"} item xs={12} md={6} lg={6} xl={4} > 
             <Projects 
@@ -111,6 +128,7 @@ return (
             livedemo={e.LiveDemo} 
             img={e.img}
             passDataToModal={passDataToModal}
+            mode={darkMode}
             />
             </Grid>
             )
