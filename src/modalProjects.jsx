@@ -35,6 +35,7 @@ export default function ModalProjects({data}) {
 
       <Modal
         open={open}
+        style={{overflow:'scroll'}}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -52,7 +53,7 @@ export default function ModalProjects({data}) {
               <Grid item xl={12} sm={12} style={{paddingLeft:'2vh',paddingRight:'2vh', justifyContent: 'center',display: 'flex'}}>
               
               <img src={require('.' + data.img).default} 
-              style={{maxWidth:'100%',maxHeight:'80vh'}} 
+              style={{maxWidth:'90%',maxHeight:'80vh'}} 
               alt="" srcset="" />
                 
 
