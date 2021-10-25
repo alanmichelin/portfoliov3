@@ -125,7 +125,7 @@ html{
 	padding: 15px;
 	-webkit-animation: scaleModal 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 	        animation: scaleModal 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-			color: ;
+
 }
 
 @-webkit-keyframes scaleModal {
