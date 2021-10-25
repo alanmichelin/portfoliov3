@@ -28,7 +28,7 @@
       "Description": "Token tools is a telegram bot that is used as a tool when investing in cryptocurrencies. My task in this project was to fix issues related to user experience.",
        "Code": "",
        "LiveDemo": "http://tokentools.finance",
-       "img":"/img/procyon.png"
+       "img":"/img/tokentools.jpg"
       },
       {"Project": "Procyon landing page",
       "Languages": "React, JavaScript, Material UI, HTML, CSS",
