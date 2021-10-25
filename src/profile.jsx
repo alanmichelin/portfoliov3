@@ -17,8 +17,8 @@ const Profile = ({data}) =>{
         <Grid  item lg={3} md={12} />
 
             
-            <Grid item lg={4} md={12} xs={12}  style={{marginTop:'10vh',display:'flex'}}>
-                    <img src={Me} alt="alanm" srcset="" style={{width:'80%', borderRadius:'50%'}} />
+            <Grid item lg={4} md={12} xs={12}  style={{marginTop:'10vh',display:'flex',justifyContent:'center'}}>
+                    <img src={Me} alt="alanm" srcset="" style={{width:'50vh', heigth:'auto', borderRadius:'50%'}} />
                 </Grid>
             <Grid item lg={4} md={12} sm={12}>
 

@@ -34,27 +34,35 @@ render(){
         </Button>
         </Grid>
         <Grid item  md={6} xs={12} >
-          <h1 style={{fontFamily:'Montserrat',fontSize:'6vh',textAlign:'center'}}>{this.props.data[2]}</h1>
-          
+          <h1 style={{fontFamily:'Montserrat',fontSize:'6vh',justifyContent:'center'}}>{this.props.data[2]}</h1>
+            <br/>
+            <div style={{fontFamily:'Montserrat',display:'flex',flexDirection:'column'}}>
+            <div style={{display:'flex',alignItems:'center',marginTop:'2vh'}}>
 
-
-            <LinkedInIcon style={{width:'6vh',height:'6vh',color:'#0d5dad'}}/>
+            <LinkedInIcon style={{width:'8vh',height:'8vh',color:'#0d5dad'}}/>
             <Link href="https://www.linkedin.com/in/alan-michelin/" underline="hover">
             <b>{'Alan Michelin'}</b>
             </Link>
-              <br/>
 
-            <GitHubIcon style={{width:'6vh',height:'6vh',color:'#0d5dad'}}/>
+            </div>
+            <div style={{display:'flex',alignItems:'center',marginTop:'2vh'}}>
+
+            <GitHubIcon style={{width:'8vh',height:'8vh',color:'#0d5dad'}}/>
             <Link href="https://github.com/alanmichelin/" underline="hover">
+
             <b>{'alanmichelin'}</b>
             </Link>
-            <br/>
+            </div>
 
-            <EmailIcon style={{width:'6vh',height:'6vh',color:'#0d5dad'}}/>
+            <div style={{display:'flex',alignItems:'center',marginTop:'2vh'}}>
+
+            <EmailIcon style={{width:'8vh',height:'8vh',color:'#0d5dad'}}/>
             <Link href="mailto:alangmichelin@gmail.com" underline="hover">
             <b>{'alangmichelin@gmail.com'}</b>
             </Link>
+            </div>
 
+            </div>
           </Grid>
       </Grid>
 
