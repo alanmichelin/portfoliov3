@@ -93,7 +93,7 @@ return (
       changeLanguage={handleChange}
       />
     </div>
-      <Grid ref={profile} style={{marginTop:'30vh',marginBottom:'20vh'}} item xs={12} sm={12} lg={12}>
+      <Grid ref={profile} style={{marginTop:'30vh'}} item xs={12} sm={12} lg={12}>
         <Profile data={data.profile}/>
       </Grid>
  

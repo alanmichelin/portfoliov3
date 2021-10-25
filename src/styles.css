@@ -6,7 +6,7 @@ html{
 }
 *{
   color:'black' !important;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .buttonStart {

@@ -40,7 +40,7 @@ const Projects = (props) =>{
   }
   
   const cardStyle2 = {card:{backgroundColor:'#343a40',color:'#f8f9fa',fontFamily:'Montserrat'},
-  cardAction:{padding:''},
+  cardAction:{padding:'5px'},
   h5:{fontSize:'16px',marginLeft:'10px',fontFamily:'Montserrat',marginTop:'5px',marginBottom:'5px'}
   }
  
@@ -94,13 +94,7 @@ const Projects = (props) =>{
           alt={props.title}
         />
         
-        <CardContent >
 
-          <div style={{width:'100%',minHeight:'1px',display:'flex',borderTop:'2px solid white',borderBottom:'2px solid white'}}>
-
-            </div>
-
-        </CardContent>
       </CardActionArea>
       <CardActions>
       <Button variant="contained" disabled={codeDisabled}  href={sourceCode}>
