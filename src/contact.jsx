@@ -35,9 +35,8 @@ render(){
         </Grid>
         <Grid item  md={6} xs={12} >
           <h1 style={{fontFamily:'Montserrat',fontSize:'6vh',justifyContent:'center'}}>{this.props.data[2]}</h1>
-            <br/>
-            <div style={{fontFamily:'Montserrat',display:'flex',flexDirection:'column'}}>
-            <div style={{display:'flex',alignItems:'center',marginTop:'2vh'}}>
+            <div style={{fontFamily:'Montserrat',display:'flex',flexDirection:'column',marginTop:'-1vh'}}>
+            <div style={{display:'flex',alignItems:'center'}}>
 
             <LinkedInIcon style={{width:'8vh',height:'8vh',color:'#0d5dad'}}/>
             <Link href="https://www.linkedin.com/in/alan-michelin/" underline="hover">
