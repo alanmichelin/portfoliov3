@@ -1,4 +1,4 @@
-import {  Grid } from "@mui/material"
+import {  Container, Grid } from "@mui/material"
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PersonIcon from '@mui/icons-material/Person';
 import TodayIcon from '@mui/icons-material/Today';
@@ -12,15 +12,14 @@ import { useRef, useState } from "react";
 const Profile = ({data}) =>{
 
     return(
-    <Grid item lg={12} container spacing={2} style={{fontFamily:'Montserrat'}} >
+        <Container>
+            <Grid item lg={12} container spacing={2} style={{fontFamily:'Montserrat'}} >
 
-        <Grid  item lg={3} md={12} />
-
-            
             <Grid item lg={4} md={12} xs={12}  style={{marginTop:'10vh',display:'flex',justifyContent:'center'}}>
-                    <img src={Me} alt="alanm" srcset="" style={{width:'50vh', heigth:'auto', borderRadius:'50%'}} />
+                    <img src={Me} alt="alanm" srcset="" style={{width:'100%',alignSelf:'center', borderRadius:'50%'}} />
                 </Grid>
-            <Grid item lg={4} md={12} sm={12}>
+            <Grid item lg={1}/>
+            <Grid item lg={7} md={12} sm={12}>
 
                 <h3 style={{fontSize:'7vh'}}>{data.about}</h3>
 
@@ -35,10 +34,9 @@ const Profile = ({data}) =>{
 
                 
               
-            
-            <Grid  item lg={3} md={12} />
+ 
     
-                <Grid item lg={6} md={12} sm={12}>
+                <Grid item lg={12} md={12} sm={12}>
 
                 <h3 style={{ fontSize:'7vh', marginTop:'10vh' }}>{data.tech}</h3>
                     <Grid item style={{display:'flex',justifyContent: 'space-evenly',flexWrap:'wrap'}}>
@@ -46,8 +44,13 @@ const Profile = ({data}) =>{
                     </Grid>
                 </Grid>
 
+
+
+         </Grid>
+
    
-    </Grid>
+
+    </Container>
 )
 }
 
