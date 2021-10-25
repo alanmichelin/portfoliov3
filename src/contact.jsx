@@ -33,8 +33,8 @@ render(){
         <SimCardDownloadIcon style={{width:'15vh',height:'15vh'}}/>
         </Button>
         </Grid>
-        <Grid item  md={6} xs={12}>
-          <h1 style={{fontFamily:'Montserrat',fontSize:'6vh'}}>{this.props.data[2]}</h1>
+        <Grid item  md={6} xs={12} >
+          <h1 style={{fontFamily:'Montserrat',fontSize:'6vh',textAlign:'center'}}>{this.props.data[2]}</h1>
           
 
 
