@@ -9,8 +9,12 @@ import data_EN from './data/data_EN.json'
 import Presentation from './presentation';
 import './styles.css'
 import Profile from './profile';
-
-
+import 'aos/dist/aos.css'
+import Aos from 'aos';
+import BasicModal from './modal';
+import ButtonAppBar from './appbar';
+import Contact from './contact';
+import ModalProjects from './modalProjects';
 function App() {
 
  
@@ -18,56 +22,41 @@ function App() {
   const [offset, setOffset] = useState('')
   const [prevOffset,setPrevOffset] = useState('')
   const [changeBackground,setChangeBackground] = useState({background:''})
-  const myRef = useRef(null)
-  const myRef2 = useRef(null)
-  const [bgColor,setBGColor] =useState({R:0,G:31,B:102})
+  const home = useRef(null)
+  const projects = useRef(null)
+  const profile = useRef(null)
+  const contact = useRef(null)
 
+  const [modal,setModal]= useState(false)
+  const[openModal,setOpenModal] = useState(false)
 
+  const [projectsModalData,setProjectsModalData]= useState('')
 
-  const executeScroll =() =>{
-    myRef.current.scrollIntoView() 
-    console.log('u clicked')
-  }
-  const executeScroll2 =() =>{
-    myRef2.current.scrollIntoView() 
-    console.log(myRef2.current)
+  const executeScroll =(props) =>{
+    console.log(props)
+    if(props==='Inicio' || props==='Home') return home.current.scrollIntoView()
+    if(props==='Perfil' || props==='Profile' ) return profile.current.scrollIntoView() 
+    if(props==='Projects' || props==='Proyectos') return projects.current.scrollIntoView() 
+    if(props==='Curriculum' || props==='Resume') return handleOpen()
+    if(props==='Contacto' || props==='Contact') return contact.current.scrollIntoView() 
+
   }
 
   useEffect(()=>{
-    window.onscroll= () =>{
-      if(offset===''){
-      setOffset(window.pageYOffset)
-      }
-      else{
-        setPrevOffset(offset)
-        setOffset(window.pageYOffset)
-      }    
+    setOpenModal(false)
+  },[openModal])
+  const handleOpen = () =>{
+    setOpenModal(!openModal)
+  }
 
-}
+  useEffect(()=>{
+    Aos.init()
+
     
   },[])
   
 
-  useEffect(()=>{
-    setPrevOffset(offset)
-    var prevR = bgColor.R
-    var prevG = bgColor.G
-    var prevB = bgColor.B
-
-    if(offset>prevOffset){
-    setBGColor({R:prevR,G:prevG+1,B:prevB+2})
-    handleBackground()
-    }
-    else if(prevOffset>offset){
-      setBGColor({R:prevR,G:prevG-1,B:prevB-2})
-    handleBackground()
-    }
-
- 
-    
-
-  },[offset])
-
+  
 
 
   const handleChange =(param) =>{
@@ -79,64 +68,74 @@ function App() {
     }
     
   }
-
-  const handleBackground = () =>{
-
-    setChangeBackground({background:`radial-gradient(rgb(${bgColor.R},${bgColor.G},${bgColor.B}),#101d1f)`})
+  const passDataToModal = (data) =>{
     
-
-    
+    setProjectsModalData(data)
   }
-  
 
-  return (
-    
-  
-
-    <div className={'background'} style={changeBackground} item xs={12} lg={12}>     
-     <div style={{ position:'absolute', left:'60vw',top:'5vw',}}>
-      </div>
-        <div class='light x1'></div>
-        <div class='light x2'></div>
-        <div class='light x3'></div>
-        <div class='light x4'></div>
-        <div class='light x5'></div>
-        <div class='light x6'></div>
-        <div class='light x7'></div>
-        <div class='light x8'></div>
-        <div class='light x9'></div>
-      
-      <Presentation handleClick={executeScroll} handleClick2={executeScroll2} text={data.general.Buttons} changeLanguage={handleChange} />
-
-      <Grid ref={myRef2} item xs={12} sm={12} lg={12} style={{marginTop:'50vh', marginBottom:'30vh'}}   >
+return (   
+  <div>
+    <ButtonAppBar text={data.general.Buttons} handleClick={executeScroll} changeLanguage={handleChange}  />
+    <BasicModal handleModal={openModal} />
+    <div ref={home}>
+      <Presentation 
+      handleClick={executeScroll} 
+      text={data.general.Buttons} 
+      changeLanguage={handleChange}
+      />
+    </div>
+      <Grid ref={profile} style={{marginTop:'30vh',marginBottom:'20vh'}} item xs={12} sm={12} lg={12}>
         <Profile data={data.profile}/>
       </Grid>
  
 
-    <Grid container ref={myRef} spacing={2} style={{paddingBottom:'20vh'}}>
-    
-    <Grid item xs={12} lg={12} style={{fontSize:'48px', color:'white'}}>
-        <h3 style={{fontFamily:'Bebas Neue',letterSpacing:'3px',textAlign:'center'}}>Projects</h3>
-        </Grid>
-    <Grid item lg={2} style={{fontSize:'48px', color:'white'}}>
-        </Grid>
-        
-    <Grid container item xs={12} lg={8} spacing={3 } >
-    
-        
-        
-        {data.projects.map(e=>
-        <Grid item xs={12} md={6} lg={4} style={{boxShadow: '0px 10px 20px 0px rgba(0,0,0,0.15)'}}> 
-        <Projects title={e.Project} languages={e.Languages} description={e.Description} sourceCode={e.Code} livedemo={e.LiveDemo} img={e.img}/>
-        </Grid>
-        )
-        }
-        </Grid>
-        </Grid>
-        
+    <Grid container ref={projects} spacing={2} >
+      <Grid item xs={12} lg={3}/>
+      <Grid item xs={12} lg={9}>
+        <h3 style={{fontFamily:'Montserrat',fontSize:'7vh'}}>{data.general.Buttons[2]}</h3>
+        <p style={{marginTop:'-5vh'}}>{data.general.instructions}</p>
+      </Grid>
 
+ 
+
+      <Grid xl={3}></Grid>
+          <Grid container item xl={6} spacing={3}>
+           
+          {data.projects.map((e,idx)=>
+            <Grid data-aos={idx%2===0? "fade-up" : "fade-down"} item xs={12} md={6} lg={6} xl={4} > 
+            <Projects 
+            title={e.Project} 
+            languages={e.Languages}
+            description={e.Description} 
+            sourceCode={e.Code} 
+            livedemo={e.LiveDemo} 
+            img={e.img}
+            passDataToModal={passDataToModal}
+            />
+            </Grid>
+            )
+          }
+
+          <ModalProjects data={projectsModalData} />
+          
+          </Grid>
+
+
+          <Grid item xl={12} sm={12} style={{marginLeft:'15px'}}>
+
+          </Grid>
+          
+
+        
+      </Grid>
+      <div ref={contact}>
+
+      <Contact data={data.contact} handleClick={executeScroll} />
+        
+      </div>
+
+    
   </div>
-
   );
 }
 

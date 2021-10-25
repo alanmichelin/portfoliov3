@@ -11,18 +11,19 @@ const Lang =({selectLanguage,content}) =>{
         selectLanguage(lang)
     },[lang])
     return(
-    <div style={{marginRight:0,marginLeft:'auto',display:'flex',alignItems:'center', color:'white'}}>
+    <div style={{display:'flex', alignItems:'center'}}>
        
-      <p style={{fontSize:'24px',fontFamily:['Noto Sans Mono', 'monospace'],paddingTop:'5px'}}>{content}</p>
-      <FormControl sx={{ m: 1, width: 70, maxHeight:40 }}>
+      <p style={{fontFamily:'"Roboto","Helvetica","Arial",sans-serif', fontSize:'14px'}}>{content.toUpperCase()}</p>
+      <FormControl >
         <Select
           value={lang}
           onChange={handleChange}
           defaultValue={lang}
           inputProps={{ 'aria-label': 'Without label' }}
+          style={{minHeight:'50px'}}
         >
 
-          <MenuItem value={'ES'}> <img src="https://lovesongs.com/img/flags/spainflag.gif" style={{width:'28px'}}/></MenuItem>
+          <MenuItem value={'ES'}> <img src="https://lovesongs.com/img/flags/spainflag.gif" style={{width:'28px',display:'block'}}/></MenuItem>
           <MenuItem value={'EN'}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" style={{width:'34px'}}/></MenuItem>
         </Select>
       </FormControl>

@@ -1,9 +1,11 @@
 {
    "general":{
       "Title":"Desarrollador Full-Stack",
-      "Buttons":["Perfil", "Curriculum", "Proyectos","Idioma"],
+      "Buttons":["Perfil", "Curriculum", "Proyectos","Inicio","Contacto","Idioma"],
       "NavBar":["Inicio","Perfil", "Curriculum", "Proyectos"],
-      "TextAnim":"Bienvenido a mi portfolio"
+      "TextAnim":"Bienvenido a mi portfolio",
+      "instructions":"Clickea cualquier proyecto para mas informacion"
+
    },
    "profile":{
       "profile":"Perfil",
@@ -29,7 +31,7 @@
        "LiveDemo":"http://tokentools.finance",
        "img":"/img/tokentools.jpg"
       },
-      {"Project":"Procyon landing page",
+      {"Project":"Procyon",
       "Languages":"React,JavaScript, Material UI, HTML, CSS",
       "Description":"Procyon es un equipo de E-Sports. La pagina todavia esta en desarrollo.",
       "Code":"https://github.com/alanmichelin/procyonpage",
@@ -58,5 +60,6 @@
       "img":"/img/PongJS.png"
       }
       
-   ]
+   ],
+   "contact":["Contacto","¡Hablemos!","Mis Redes","Descarga mi CV"]
 }

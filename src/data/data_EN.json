@@ -1,9 +1,10 @@
 {
    "general":{
       "Title":"Full-Stack Developer",
-      "Buttons":["Profile", "Resume", "Projects","Language"],
+      "Buttons":["Profile", "Resume", "Projects","Home","Contact","Language"],
       "NavBar":["Home","Profile", "Resume", "Projects"],
-      "TextAnim":"Welcome to my portfolio"
+      "TextAnim":"Welcome to my portfolio",
+      "instructions":"Click any of the projects for more info"
    },
    "profile":{
       "profile":"Profile",
@@ -58,5 +59,7 @@
       "img":"/img/PongJS.png"
       }
       
-   ]
+   ],
+   "contact":["Contact","Lets talk!","My social media","Download my resume"]
+
 }

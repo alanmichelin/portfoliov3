@@ -4,14 +4,14 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
-// import p from '@mui/material/p';
-import { Grid } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { createTheme } from '@mui/material';
-import { ThemeProvider } from '@mui/material';
-
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import './styles.css'
 
+import CardMedia from '@mui/material/CardMedia';
+
+import { CardActionArea } from '@mui/material';
 const theme = createTheme({
   palette: {
     action: {
@@ -27,7 +27,12 @@ const Projects = (props) =>{
   const [demoDisabled, setDemoDisabled] = useState(true)
   const [sourceCode,setSourceCode] = useState('')
   const [liveDemo,setLiveDemo] = useState('')
-  let divStyle = {width:'100%', height:'1vh', backgroundColor:'#b0bec5',zIndex:5} 
+  const [hovered,setHovered] = useState(false)
+  const [dataToPass,setDataTopass] = useState('')
+  const [cardClass,setCardClass]= useState('')
+
+
+ 
 
   useEffect(()=>{
     checkCode()
@@ -46,49 +51,52 @@ const Projects = (props) =>{
       setLiveDemo(props.livedemo)
       }
   }
- 
 
-
-const card = (
-  <div style={{overflow:'hidden'}}>
-    <div style={divStyle}></div>
-    <CardContent style={{textAlign:'center', backgroundColor:'#081A44', color:'#ADDEEB', fontFamily:['Roboto', 'sans-serif'],  fontStyle:''}}>
-      <p variant="h5" component="div" style={{display:'inline-block',height:'60px'}}>
-        {props.title}
-      </p>
-      
-      <div style={{display:'flex'}}>
-
-      <img src={require('.' + props.img).default} alt="img" style={{float:'left', width:'100%', height:'300px',objectFit:'cover'}} />
-      </div>
-      <p sx={{ mb: 1.5 }} color="text.secondary" style={{display:'inline-block',height:'40px'}}>
-        {props.languages}
-      </p>
-      <p variant="body2" style={{display:'inline-block', height:'100px', overflow:'hidden'}} >
-        {props.description}  
-      </p>
+  const handleClick = () =>{
+    setCardClass('cardanimation')
     
-    <CardActions style={{justifyContent: 'space-evenly'}}>
-    <div>
-    <ThemeProvider theme={theme}>
-    <Button variant="contained" disabled={codeDisabled}  href={sourceCode}>
-      Source code <GitHubIcon/>
-      </Button>
-    <Button variant="contained" disabled={demoDisabled} href={liveDemo}>
-      Live Demo <PlayCircleIcon/>
-      </Button>
-      </ThemeProvider>
-      </div>  
-      </CardActions>
-    </CardContent>
-  </div>
-);
+    setTimeout(()=>{
+      props.passDataToModal(props)
+  
+  },100)
+    setTimeout(()=>{setCardClass('')},1000)
+  }
 
 
   return (
+      <Card className={cardClass} style={{backgroundColor:'#343a40',color:'#f8f9fa',fontFamily:'Montserrat'}} onClick={handleClick}>
+      <CardActionArea>
+      <h5 style={{fontSize:'16px',marginLeft:'10px',fontFamily:'Montserrat',marginTop:'5px',marginBottom:'5px'}}>
+          {props.title}
+          </h5>
+        <CardMedia
+          component="img"
+          height="240"
+          image= {require('.' + props.img).default}
+          alt={props.title}
+        />
+        
+        <CardContent >
 
-      <Card variant="outlined">{card}</Card>
+          <div style={{width:'100%',minHeight:'1px',display:'flex',borderTop:'2px solid white',borderBottom:'2px solid white'}}>
 
+            </div>
+
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+      <Button variant="contained" disabled={codeDisabled}  href={sourceCode}>
+        Code <GitHubIcon/>
+        </Button>
+        <Button variant="contained" disabled={demoDisabled} href={liveDemo}>
+          Demo <PlayCircleIcon/>
+      </Button>
+
+    
+
+      </CardActions>
+    </Card>
+      // </div>
   )
   }
 

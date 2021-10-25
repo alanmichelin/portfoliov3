@@ -6,14 +6,14 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 
 const Item = {
-  color:'#ffffff',
+  color:'black',
   padding: '0.5rem',
   textAlign: 'center',
   minHeight:'8.5rem',
   maxHeight:'8.5rem',
-  fontFamily:'Leelawadee UI',
-  fontSize:'16px',
-  filter: 'drop-shadow(6px 6px 3px rgba(0,0,0,1)'
+  fontFamily:'Montserrat',
+  fontWeight:100,
+  fontSize:'16px'
 };
 
 export default function Logos() {

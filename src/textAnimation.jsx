@@ -10,7 +10,7 @@ const TextAnimated = () =>{
 
         typeEffect()
       },[])
-    let name = "Welcome to my portfolio"
+    let name = "WELCOME TO MY PORTFOLIO"
   var i = 0
   let j = name.length
   const typeEffect3 = () =>{
@@ -54,10 +54,9 @@ const typeEffect2 =() =>{
     }
 
 }
-const text = [<span style={{color:'red'}}>aas</span>,<span style={{color:'yellow'}}>d</span>]
 return (
   <div style={{display:'block'}}>
-    <h1 style={{fontSize:50,color:'white',fontFamily:['Noto Sans Mono', 'monospace']}}>{nameAnim}</h1>
+    <h1 style={{fontSize:'8vw',fontFamily:['Roboto', 'monospace'] , fontWeight:400}}>{nameAnim}</h1>
     </div>
 )}
 

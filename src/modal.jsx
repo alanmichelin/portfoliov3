@@ -22,6 +22,7 @@ const style = {
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+
 };
 
 
@@ -53,7 +54,7 @@ export default function BasicModal({handleModal}) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-        <Button style={{marginLeft:'auto',rigth:'0px'}}><CloseIcon/></Button>
+        <Button style={{marginLeft:'auto',rigth:'0px'}} onClick={handleClose}><CloseIcon/></Button>
             <div style={{display:'flex', flexDirection:'row', marginBottom:'25px'}} >
               
                 <div style={{display:'flex', flexDirection:'column'}}>
