@@ -12,17 +12,14 @@ import './styles.css'
 const Presentation = ({handleClick,handleClick2,text,changeLanguage}) =>{
     const [buttonClass,setButtonClass] = useState('')
     const[openModal,setOpenModal] = useState(false)
+
     useEffect(()=>{
       setOpenModal(false)
     },[openModal])
-    const handleOpen = () =>{
-      setOpenModal(!openModal)
-    }
-// const handlingClick =(text) =>{
-//   console.log('click', text)
-//   if(text==='Curriculum' || text==='Resume') handleOpen()
-//   else handleClick(text)
-// }
+
+
+
+
     const handleStartButtonClick = () =>{
       setButtonClass('buttonStart')
       setTimeout(()=>{handleClick('Profile')},400)
@@ -43,18 +40,17 @@ const Presentation = ({handleClick,handleClick2,text,changeLanguage}) =>{
           </ul>
       </div>  
       </div>
-        {/* ,backgroundColor:'#0A0A0A' */}
- {/* ,backgroundImage:'-webkit-linear-gradient(30deg, #013A6B 50%, #004E95 50%)', */}
+
       <BasicModal handleModal={openModal} />
       <div style={{textAlign:'center', paddingTop:'20vh', }}>
         <div style={{top:'15vh',right:'20vw',position:'absolute'}}>
         </div>
         <Grid container >
       <Grid item xs={12} data-aos="fade-down" >
-      {/* <TextAnimated/> */}
+
       <div  className='presentation' style={{color:'white'}}>
         <h1 data-aos='zoom-in' data-aos-duration="2000" style={{textAlign:'center', fontSize:'8vh' ,letterSpacing:'8px',fontFamily:'Montserrat'}}>Alan Michelin</h1> 
-        <h1 data-aos='zoom-in' data-aos-duration="3000"  style={{textAlign:'center', fontSize:'8vh' ,letterSpacing:'8px'}}>FULLSTACK DEVELOPER </h1>
+        <h1 data-aos='zoom-in' data-aos-duration="3000" style={{textAlign:'center', fontSize:'8vh' ,letterSpacing:'8px'}}>FULLSTACK DEVELOPER </h1>
       </div> 
         <div data-aos='zoom-in' data-aos-duration="4000" >
         <p style={{fontFamily:'roboto', fontWeight:100,fontSize:'2vh',color:'white'}}>CLICK TO START</p>

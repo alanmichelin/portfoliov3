@@ -64,9 +64,9 @@ const Projects = (props) =>{
 
 
   return (
-      <Card className={cardClass} style={{backgroundColor:'#343a40',color:'#f8f9fa',fontFamily:'Montserrat'}} onClick={handleClick}>
-      <CardActionArea>
-      <h5 style={{fontSize:'16px',marginLeft:'10px',fontFamily:'Montserrat',marginTop:'5px',marginBottom:'5px'}}>
+      <Card className={cardClass} style={{backgroundColor:'#e6e6e6',color:'#161616',fontFamily:'Montserrat',border:'3px solid #086d9c'}} onClick={handleClick}>
+      <CardActionArea style={{padding:'5px'}}>
+      <h5 style={{fontSize:'16px',fontWeight:1000,marginLeft:'10px',fontFamily:'Montserrat',marginTop:'5px',marginBottom:'5px'}}>
           {props.title}
           </h5>
         <CardMedia
@@ -78,9 +78,6 @@ const Projects = (props) =>{
         
         <CardContent >
 
-          <div style={{width:'100%',minHeight:'1px',display:'flex',borderTop:'2px solid white',borderBottom:'2px solid white'}}>
-
-            </div>
 
         </CardContent>
       </CardActionArea>
