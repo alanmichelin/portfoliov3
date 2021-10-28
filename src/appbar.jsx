@@ -43,7 +43,7 @@ export default function ButtonAppBar({text, handleClick,changeLanguage}) {
   return (
     <Box sx={{ flexGrow: 1 }}>
   
-      <AppBar position="fixed" style={{zIndex:1300}}>
+      <AppBar position="fixed" style={{zIndex:1300,height:'60px', backgroundColor:'#000000' }} >
         <Toolbar>
           {  size < 850 ?
           (
@@ -52,7 +52,7 @@ export default function ButtonAppBar({text, handleClick,changeLanguage}) {
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            sx={{'.MuiButton-root': {color:'blue'}}}
             onClick={handleOpen}
           >
           <MenuIcon />

@@ -9,13 +9,34 @@ html{
   /* overflow-x: hidden; */
 }
 
+.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-colorInherit.MuiButtonBase-root.css-1y942vo-MuiButtonBase-root-MuiButton-root:hover{
+	background-color: #D3D3D3;
+	color:red;
+	
+}
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiSelect-icon.MuiSelect-iconOutlined.MuiSelect-iconOpen.css-bpeome-MuiSvgIcon-root-MuiSelect-icon{
+	position: absolute;
+
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiMenu-paper.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper{
+	position: absolute;
+
+
+}
 .buttonStart {
 
 	-webkit-animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
-
+.css-3szm0p-MuiInputBase-root-MuiOutlinedInput-root::after{
+	/* border: 2px solid blue; */
+	background-image: red;
+	border:none;
+	outline: none;
+	color:red;
+	backface-visibility: hidden;
+}
 @-webkit-keyframes scale-out-center {
 	0% {
 	  -webkit-transform: scale(1);

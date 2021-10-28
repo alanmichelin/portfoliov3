@@ -97,10 +97,10 @@ const Projects = (props) =>{
 
       </CardActionArea>
       <CardActions>
-      <Button variant="contained" disabled={codeDisabled}  href={sourceCode}>
+      <Button variant="contained" disabled={codeDisabled}  href={sourceCode} target="_blank">
         Code <GitHubIcon/>
         </Button>
-        <Button variant="contained" disabled={demoDisabled} href={liveDemo}>
+        <Button variant="contained" disabled={demoDisabled} href={liveDemo} target="_blank">
           Demo <PlayCircleIcon/>
       </Button>
 

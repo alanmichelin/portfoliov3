@@ -48,7 +48,7 @@ const Presentation = ({handleClick,handleClick2,text,changeLanguage}) =>{
         <Grid container >
       <Grid item xs={12} data-aos="fade-down" >
 
-      <div  className='presentation' style={{color:'white'}}>
+      <div  className='presentation' style={{color:'white',position:'static'}}>
         <h1 data-aos='zoom-in' data-aos-duration="2000" style={{textAlign:'center', fontSize:'8vh' ,letterSpacing:'8px',fontFamily:'Montserrat'}}>Alan Michelin</h1> 
         <h1 data-aos='zoom-in' data-aos-duration="3000" style={{textAlign:'center', fontSize:'8vh' ,letterSpacing:'8px'}}>FULLSTACK DEVELOPER </h1>
       </div> 
