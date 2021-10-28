@@ -4,10 +4,7 @@ html{
     scroll-behavior: smooth;
 	overflow-x: hidden;
 }
-*{
-  color:'black' !important;
-  /* overflow-x: hidden; */
-}
+
 
 .MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-colorInherit.MuiButtonBase-root.css-1y942vo-MuiButtonBase-root-MuiButton-root:hover{
 	background-color: #D3D3D3;

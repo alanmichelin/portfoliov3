@@ -2,8 +2,6 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
@@ -33,7 +31,7 @@ export default function ButtonAppBar({text, handleClick,changeLanguage}) {
     })
 
 
-   
+  const buttonStyle = {backgroundColor: '#D3D3D3', color:'red'}
 
    const handleOpen = () =>{
        console.log(open)
@@ -52,7 +50,7 @@ export default function ButtonAppBar({text, handleClick,changeLanguage}) {
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{'.MuiButton-root': {color:'blue'}}}
+            
             onClick={handleOpen}
           >
           <MenuIcon />
@@ -63,7 +61,7 @@ export default function ButtonAppBar({text, handleClick,changeLanguage}) {
           (
             <React.Fragment>
           <Grid lg={12}>
-          <Icon text={text[3]} icon={<HomeIcon/>} handleClick={handleClick}/>
+          <Icon text={text[3]}  icon={<HomeIcon/>} handleClick={handleClick}/>
 
           <Icon text={text[0]} icon={<PersonRoundedIcon/>} handleClick={handleClick} />
           <Icon text={text[1]} icon={<SimCardDownloadIcon/>} handleClick={handleClick} />
