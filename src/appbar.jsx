@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import CodeRoundedIcon from '@mui/icons-material/CodeRounded';
 import SimCardDownloadIcon from '@mui/icons-material/SimCardDownload';
-
+import './styles.css'
 import { Grid } from '@mui/material';
 import PersistentDrawerLeft from './appbarmobile';
 import { Icon } from './IconBar';
