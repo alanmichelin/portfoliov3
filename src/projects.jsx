@@ -82,7 +82,7 @@ const Projects = (props) =>{
   
 
   return (
-      <Card className={cardClass} style={cardStyle.card} onClick={handleClick}>
+      <Card className={cardClass} style={cardStyle.card} onClick={handleClick} >
       <CardActionArea style={cardStyle.cardAction}>
       <h5 style={cardStyle.h5}>
           {props.title}

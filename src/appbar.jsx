@@ -59,7 +59,7 @@ export default function ButtonAppBar({text, handleClick,changeLanguage}) {
             :
           (
             <React.Fragment>
-          <Grid lg={12} 
+          <Grid item lg={12} 
           sx={{ '.css-1y942vo-MuiButtonBase-root-MuiButton-root':
                   {'&:hover':{
                               backgroundColor: '#D3D3D3',color:'red'

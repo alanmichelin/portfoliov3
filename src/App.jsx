@@ -114,13 +114,14 @@ return (
 
  
 
-      <Grid xl={3}></Grid>
+      <Grid xl={3}/>
 
           <Grid container item xl={6} spacing={3}>
 
           {data.projects.map((e,idx)=>
-            <Grid data-aos={idx%2===0? "fade-up" : "fade-down"} item xs={12} md={6} lg={6} xl={4} > 
+            <Grid data-aos={idx%2===0? "fade-up" : "fade-down"} item xs={12} md={6} lg={6} xl={4} key={idx}> 
             <Projects 
+            
             title={e.Project} 
             languages={e.Languages}
             description={e.Description} 

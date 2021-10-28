@@ -1,5 +1,5 @@
 import Grid from '@mui/material/Grid'
-import TextAnimated from './textAnimation'
+
 import { useEffect, useState } from 'react';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import CodeRoundedIcon from '@mui/icons-material/CodeRounded';

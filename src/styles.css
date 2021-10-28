@@ -1,10 +1,15 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Roboto:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Oswald:wght@300&family=Roboto:wght@100;500&display=swap');
 html{
     scroll-behavior: smooth;
 	overflow-x: hidden;
 }
 
 
+/* .MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-colorInherit.MuiButtonBase-root.css-1y942vo-MuiButtonBase-root-MuiButton-root:hover{
+	background-color: #D3D3D3;
+	color:red;
+} */
 
 .buttonStart {
 

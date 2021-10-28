@@ -40,7 +40,7 @@ export default function ModalProjects({data}) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Grid xl={6} xs={11} className={modalClassName} style={{backgroundColor:'white'}}>
+        <Grid item xl={6} xs={11} className={modalClassName} style={{backgroundColor:'white'}}>
         {/* <Box sx={style}> */}
         
           <Button style={{position:'absolute',right:'5px',top:'5px'}} onClick={handleClose}><CloseIcon/></Button>
