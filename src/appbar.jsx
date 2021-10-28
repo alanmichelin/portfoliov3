@@ -31,7 +31,6 @@ export default function ButtonAppBar({text, handleClick,changeLanguage}) {
     })
 
 
-  const buttonStyle = {backgroundColor: '#D3D3D3', color:'red'}
 
    const handleOpen = () =>{
        console.log(open)
@@ -50,7 +49,7 @@ export default function ButtonAppBar({text, handleClick,changeLanguage}) {
             edge="start"
             color="inherit"
             aria-label="menu"
-            
+
             onClick={handleOpen}
           >
           <MenuIcon />
@@ -60,7 +59,13 @@ export default function ButtonAppBar({text, handleClick,changeLanguage}) {
             :
           (
             <React.Fragment>
-          <Grid lg={12}>
+          <Grid lg={12} 
+          sx={{ '.css-1y942vo-MuiButtonBase-root-MuiButton-root':
+                  {'&:hover':{
+                              backgroundColor: '#D3D3D3',color:'red'
+                             }
+                  }
+              }}>
           <Icon text={text[3]}  icon={<HomeIcon/>} handleClick={handleClick}/>
 
           <Icon text={text[0]} icon={<PersonRoundedIcon/>} handleClick={handleClick} />
