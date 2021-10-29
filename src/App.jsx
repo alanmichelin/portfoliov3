@@ -1,7 +1,6 @@
 import Grid from '@mui/material/Grid'
-import { Container } from '@mui/material';
 import Projects from './projects';
-
+import React from 'react';
 import { useEffect, useState, useRef } from 'react';
 
 import data_ES from './data/data_ES.json'
@@ -22,15 +21,12 @@ function App() {
 
  
   const [data,setData] = useState(data_ES)
-  const [offset, setOffset] = useState('')
-  const [prevOffset,setPrevOffset] = useState('')
-  const [changeBackground,setChangeBackground] = useState({background:''})
   const home = useRef(null)
   const projects = useRef(null)
   const profile = useRef(null)
   const contact = useRef(null)
 
-  const [modal,setModal]= useState(false)
+  
   const[openModal,setOpenModal] = useState(false)
   const [darkMode,setDarkMode] = useState(false)
   const [projectsModalData,setProjectsModalData]= useState('')

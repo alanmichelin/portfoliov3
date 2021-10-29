@@ -5,7 +5,12 @@ html{
 	overflow-x: hidden;
 }
 
-
+.buttonHover{
+	
+		background-color: '#D3D3D3';
+		color:'red';
+		
+}
 /* .MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-colorInherit.MuiButtonBase-root.css-1y942vo-MuiButtonBase-root-MuiButton-root:hover{
 	background-color: #D3D3D3;
 	color:red;

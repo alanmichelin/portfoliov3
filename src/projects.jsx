@@ -2,35 +2,26 @@ import React from 'react';
 import {useState,useEffect} from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
+
 import Button from '@mui/material/Button';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { createTheme } from '@mui/material';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import './styles.css'
 
 import CardMedia from '@mui/material/CardMedia';
 
 import { CardActionArea } from '@mui/material';
-const theme = createTheme({
-  palette: {
-    action: {
-      disabledBackground: '#BEBEBE',
-      disabled: '#919191'
-    }
-  }
-});
+
 
 
 const Projects = (props) =>{
 
-  const [isActive, setIsActive] = useState(false)
+
   const [codeDisabled, setCodeDisabled] = useState(true)
   const [demoDisabled, setDemoDisabled] = useState(true)
   const [sourceCode,setSourceCode] = useState('')
   const [liveDemo,setLiveDemo] = useState('')
-  const [hovered,setHovered] = useState(false)
-  const [dataToPass,setDataTopass] = useState('')
+
   const [cardClass,setCardClass]= useState('')
   const [cardStyle,setCardStyle] = useState('')
 

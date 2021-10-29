@@ -6,7 +6,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import InfoIcon from '@mui/icons-material/Info';
 import Logos from "./logos";
 import Me from './img/alanm.jpg'
-import { useRef, useState } from "react";
+import React from 'react'
 
 
 const Profile = ({data}) =>{
@@ -16,7 +16,7 @@ const Profile = ({data}) =>{
             <Grid item lg={12} container spacing={2} style={{fontFamily:'Montserrat'}} >
 
             <Grid item lg={4} md={12} xs={12}  style={{marginTop:'10vh',display:'flex',justifyContent:'center'}}>
-                    <img src={Me} alt="alanm" srcset="" style={{width:'100%',alignSelf:'center', borderRadius:'50%'}} />
+                    <img src={Me} alt="alanm" srcSet="" style={{width:'100%',alignSelf:'center', borderRadius:'50%'}} />
                 </Grid>
             <Grid item lg={1}/>
             <Grid item lg={7} md={12} sm={12}>

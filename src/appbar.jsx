@@ -19,9 +19,7 @@ export default function ButtonAppBar({text, handleClick,changeLanguage}) {
   // console.log(handleClick)
     const [open,setOpen] = React.useState(false)
     const [size,setSize] = React.useState(window.innerWidth)
-    const handleBtnClick = (text) =>{
-        handleClick(text)
-    }
+
     React.useEffect(()=>{
         console.log(size)
     },[size])

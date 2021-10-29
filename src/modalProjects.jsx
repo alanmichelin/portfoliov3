@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useState } from 'react';
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import CloseIcon from '@mui/icons-material/Close';
@@ -18,10 +17,10 @@ export default function ModalProjects({data}) {
     setOpen(true)
   };
   const handleClose = () => setOpen(false);
-  const [modalData,setModalData] = useState('')
+
   React.useEffect(()=>{
         if(data!==''){
-          setModalData(data)
+          
         handleOpen()
       }
 
@@ -54,7 +53,7 @@ export default function ModalProjects({data}) {
               
               <img src={require('.' + data.img).default} 
               style={{maxWidth:'90%',maxHeight:'80vh'}} 
-              alt="" srcset="" />
+              alt="" srcSet="" />
                 
 
               </Grid>
