@@ -1,15 +1,12 @@
 import Grid from '@mui/material/Grid'
 
 import { useEffect, useState } from 'react';
-import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
-import CodeRoundedIcon from '@mui/icons-material/CodeRounded';
-import SimCardDownloadIcon from '@mui/icons-material/SimCardDownload';
-import Lang from './lang'
+import React from 'react';
 import BasicModal from './modal'
-import { Button, IconButton } from '@mui/material';
+import {  IconButton } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import './styles.css'
-const Presentation = ({handleClick,handleClick2,text,changeLanguage}) =>{
+const Presentation = ({handleClick}) =>{
     const [buttonClass,setButtonClass] = useState('')
     const[openModal,setOpenModal] = useState(false)
 

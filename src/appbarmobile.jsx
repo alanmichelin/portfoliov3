@@ -7,7 +7,7 @@ import List from '@mui/material/List';
 
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
@@ -33,16 +33,14 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-end',
 }));
 
-export default function PersistentDrawerLeft({handleBar,text,icon,handleClick ,changeLanguage}) {
+export default function PersistentDrawerLeft({handleBar,text,handleClick ,changeLanguage}) {
 
   const theme = useTheme();
   const [open, setOpen] = React.useState(true);
     React.useEffect(()=>{
         setOpen(handleBar)
     },[handleBar])
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+
 
   const handleDrawerClose = () => {
     setOpen(false);

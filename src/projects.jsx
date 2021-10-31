@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from 'react';
 import {useState,useEffect} from 'react';
 import Card from '@mui/material/Card';
