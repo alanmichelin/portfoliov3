@@ -1,4 +1,5 @@
-import * as React from 'react';
+import {useState,useEffect} from 'react';
+import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -17,10 +18,10 @@ import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
 
 export default function ButtonAppBar({text, handleClick,changeLanguage}) {
   // console.log(handleClick)
-    const [open,setOpen] = React.useState(false)
-    const [size,setSize] = React.useState(window.innerWidth)
+    const [open,setOpen] = useState(false)
+    const [size,setSize] = useState(window.innerWidth)
 
-    React.useEffect(()=>{
+    useEffect(()=>{
         console.log(size)
     },[size])
     window.addEventListener('resize',(e)=>{
@@ -38,7 +39,7 @@ export default function ButtonAppBar({text, handleClick,changeLanguage}) {
   return (
     <Box sx={{ flexGrow: 1 }}>
   
-      <AppBar position="fixed" style={{zIndex:1300,height:'60px'}} >
+      <AppBar position="fixed" style={{zIndex:1300,backgroundColor:'black',height:'60px'}} >
         <Toolbar>
           {  size < 850 ?
           (
@@ -58,13 +59,14 @@ export default function ButtonAppBar({text, handleClick,changeLanguage}) {
           (
             <React.Fragment>
           <Grid item lg={12} 
-          sx={{ '.css-1y942vo-MuiButtonBase-root-MuiButton-root':
-                  {'&:hover':{
-                              backgroundColor: '#D3D3D3',color:'red'
-                             }
-                  }
-              }}>
-          <Icon text={text[3]}  icon={<HomeIcon/>} handleClick={handleClick}/>
+          // sx={{  
+          //   '&:hover':{
+          //                     backgroundColor: '#D3D3D3',color:'red'
+          //                    }
+                  
+          //     }}
+              >
+          <Icon  text={text[3]}  icon={<HomeIcon/>} handleClick={handleClick}/>
 
           <Icon text={text[0]} icon={<PersonRoundedIcon/>} handleClick={handleClick} />
           <Icon text={text[1]} icon={<SimCardDownloadIcon/>} handleClick={handleClick} />
