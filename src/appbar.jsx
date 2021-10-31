@@ -18,16 +18,15 @@ import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
 export default function ButtonAppBar({text, handleClick,changeLanguage}) {
   // console.log(handleClick)
     const [open,setOpen] = React.useState(false)
-    // eslint-disable-next-line no-unused-vars
     const [size,setSize] = React.useState(window.innerWidth)
 
     React.useEffect(()=>{
         console.log(size)
     },[size])
-    // window.addEventListener('resize',(e)=>{
-    //     // setSize(e.innerWidth)
-    //     setTimeout( setSize(e.target.innerWidth))
-    // })
+    window.addEventListener('resize',(e)=>{
+        // setSize(e.innerWidth)
+        setTimeout( setSize(e.target.innerWidth),1000)
+    })
 
 
 
