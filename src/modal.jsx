@@ -2,11 +2,10 @@ import * as React from 'react';
 import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import DownloadIcon from '@mui/icons-material/Download';
-import cv_es from './img/cv_es.png'
-import cv_en from './img/cv_en.png'
+import cv_es from './img/cves.png'
+import cv_en from './img/cven.png'
 import pdf_en from './img/cv_en.pdf'
 import pdf_es from './img/cv_es.pdf'
 import CloseIcon from '@mui/icons-material/Close';
@@ -71,12 +70,7 @@ export default function BasicModal({handleModal}) {
                     
                 </div>
                 <Button variant='contained' startIcon={<DownloadIcon/>} onClick={()=>{window.open(selected===cv_es ? pdf_es : pdf_en, '_blank')}}>Download PDF</Button>   
-          {/* <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography> */}
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            {/* Duis mollis, est non commodo luctus, nisi erat porttitor ligula. */}
-          </Typography>
+
         </Box>
       </Modal>
     </div>

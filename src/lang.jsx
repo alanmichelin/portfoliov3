@@ -16,7 +16,7 @@ const Lang =({selectLanguage,content}) =>{
     
  
     return(
-    <div style={{display:'flex', flexDirection:'row'}}>
+    <div style={{display:'flex', flexDirection:'row', marginTop:'0.6rem', marginLeft:'0.5rem'}}>
        
       <p style={{fontFamily:'"Roboto","Helvetica","Arial",sans-serif', fontSize:'14px'}}>{content.toUpperCase()}</p>
 
